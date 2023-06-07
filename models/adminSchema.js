@@ -55,7 +55,6 @@ const validateAdmin = (body) => {
         username: Joi.string().required().min(4),
         password: Joi.string().required().min(4),
     })
-
     return schema.validate(body)
 }
 

@@ -9,6 +9,12 @@ app.use(cors());
 config();
 
 
+//=========== ROUTES ==========
+const Admin = require('./router/admin')
+
+//=========== ENTPOINTS ==========
+app.use("/admins", Admin);
+
 // CONNECT DATABASE
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.DATABASE)
